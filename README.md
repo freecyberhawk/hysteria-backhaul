@@ -1,58 +1,44 @@
-# Hysteria v2 Backhaul Installer
+# Hysteria Backhaul Setup
 
-This project provides a **simple automated script** to set up a Hysteria v2 reverse tunnel (backhaul) between two servers — typically one in **Iran** and one in a **free region** like the UK. This setup is perfect for bypassing heavy filtering and preserving high-speed, resilient VPN connectivity.
-
----
+This repository allows you to quickly set up a **Hysteria v2 reverse tunnel** for VPN backhaul from an Iran server to a foreign server (e.g., UK). Ideal for bypassing restrictions where **incoming connections to Iran are allowed, but outgoing are filtered**.
 
 ## 📦 Features
-- One-click setup for **Hysteria v2 Server (Iran)** or **Client (UK)**
-- Uses strong TLS and obfuscation (FakeTLS)
-- Automatically generates TLS certificates and a strong password
-- SOCKS5 proxy ready on the client for routing VPN or traffic
 
----
+* Auto-install `hy2` binary
+* Backhaul setup with TLS and password authentication
+* faketls obfuscation using `www.cloudflare.com`
+* Easy interactive menu
 
-## ⚙️ Usage
+## 🚀 Quick Start
 
-### 1. Clone or Download
+Run this command on your server (Iran or UK):
+
 ```bash
-git clone https://github.com/freecyberhawk/hysteria-backhaul.git
-cd hysteria-backhaul
+bash <(curl -fsSL https://raw.githubusercontent.com/freecyberhawk/hysteria-backhaul/main/install.sh)
 ```
 
-### 2. Run Installer
-```bash
-bash install.sh
-```
 Choose:
-- `1` for Iran server (opens port & waits for client)
-- `2` for UK client (connects to Iran & provides local proxy)
+
+* `1` for **Iran server** (runs Hysteria server on specified UDP port)
+* `2` for **UK server** (connects as Hysteria client, sets up local SOCKS5)
 
 ---
 
-## 🗃 Directory Structure
+## 📁 Repo Structure
+
 ```
 hysteria-backhaul/
-├── install.sh          # Main installer script
+├── install.sh           # Main setup script
 └── binaries/
-    └── hy2            # Pre-downloaded Hysteria v2 binary
+    └── hy2             # Hysteria binary (Linux AMD64)
 ```
-
-If `get.hy2.sh` is blocked, this repo avoids it by using the local binary from `binaries/hy2`.
 
 ---
 
-## ☕ Support This Project
-If you find this helpful and want to support my work:
+## ☕ Support the Author
 
-**TRON Wallet:**
-```
-TAAJsdT3AnVD8cnKWP9SH3rKgi6zgfLWMt
-```
+If this tool helps you, consider buying me a coffee via Tron (TRX):
 
-Thank you 🙏
+**`TAAJsdT3AnVD8cnKWP9SH3rKgi6zgfLWMt`**
 
----
-
-## 🔐 Disclaimer
-Use responsibly. This project is intended to help users in censored regions access free and open internet. You are responsible for your own usage.
+> Maintained by [freecyberhawk](https://github.com/freecyberhawk)
