@@ -134,6 +134,12 @@ echo -e "\n\${CYAN}== Streaming Logs (press Ctrl+C to stop) ==\${RESET}"
 journalctl -u hysteria-server -f 2>/dev/null || journalctl -u hysteria-client -f
 }
 
+function stop\_service() {
+echo -e "\n\${CYAN}== Stopping Hysteria Service ==\${RESET}"
+systemctl stop hysteria-server 2>/dev/null || systemctl stop hysteria-client
+echo -e "\${GREEN}✅ Hysteria service stopped.\${RESET}"
+}
+
 # Main menu
 
 echo -e "\${CYAN}==== HYSTERIA v2 BACKHAUL SETUP ====\${RESET}"
@@ -141,7 +147,8 @@ echo "1) Setup Iran Server (Server mode)"
 echo "2) Setup UK Client (Client mode)"
 echo "3) Check Service Status"
 echo "4) Follow Service Logs"
-echo -n "Select mode (1, 2, 3 or 4): "
+echo "5) Stop Hysteria Service"
+echo -n "Select mode (1, 2, 3, 4 or 5): "
 read mode
 
 install\_hysteria
@@ -152,5 +159,6 @@ case \$mode in
 2. setup\_client ;;
 3. check\_status ;;
 4. follow\_logs ;;
+5. stop\_service ;;
    \*) echo "Invalid option. Exiting." && exit 1 ;;
    esac
