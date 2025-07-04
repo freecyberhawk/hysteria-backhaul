@@ -2,6 +2,8 @@
 
 This repository allows you to quickly set up a **Hysteria v2 reverse tunnel** for VPN backhaul from an Iran server to a foreign server (e.g., UK). Ideal for bypassing restrictions where **incoming connections to Iran are allowed, but outgoing are filtered**.
 
+![Hysteria](media/hysteria2.png)
+
 ## 📦 Features
 
 * Auto-install `hy2` binary
