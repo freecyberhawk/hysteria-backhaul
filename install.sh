@@ -140,20 +140,20 @@ function stop_service() {
 # Main menu
 echo -e "${CYAN}==== HYSTERIA v2 BACKHAUL SETUP ====${RESET}"
 echo "1) Setup Iran Server (Server mode)"
-echo "2) Setup UK Client (Client mode)"
+echo "2) Setup Kharej Client (Client mode)"
 echo "3) Check Service Status"
 echo "4) Follow Service Logs"
 echo "5) Stop Hysteria Service"
 echo -n "Select mode (1, 2, 3, 4 or 5): "
 read mode
 
-install_hysteria
 
 case $mode in
-  1) setup_server ;;
-  2) setup_client ;;
-  3) check_status ;;
-  4) follow_logs ;;
-  5) stop_service ;;
+  1) install_hysteria ;;
+  2) setup_server ;;
+  3) setup_client ;;
+  4) check_status ;;
+  5) follow_logs ;;
+  6) stop_service ;;
   *) echo "Invalid option. Exiting." && exit 1 ;;
 esac
