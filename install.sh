@@ -139,11 +139,12 @@ function stop_service() {
 
 # Main menu
 echo -e "${CYAN}==== HYSTERIA v2 BACKHAUL SETUP ====${RESET}"
-echo "1) Setup Iran Server (Server mode)"
-echo "2) Setup Kharej Client (Client mode)"
-echo "3) Check Service Status"
-echo "4) Follow Service Logs"
-echo "5) Stop Hysteria Service"
+echo "1) Install Hysteria Core (Required)"
+echo "2) Setup Iran Server (Server mode)"
+echo "3) Setup Kharej Client (Client mode)"
+echo "4) Check Service Status"
+echo "5) Follow Service Logs"
+echo "6) Stop Hysteria Service"
 echo -n "Select mode (1, 2, 3, 4 or 5): "
 read mode
 
